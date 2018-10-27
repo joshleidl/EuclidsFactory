@@ -49,16 +49,6 @@ public class TouchRotatable : MonoBehaviour
         }
     }
 
-    /*
-    Direction update_x ()
-    {
-    }
-
-    Direction update_y ()
-    {
-
-    }
-    */
     // Update is called once per frame
     void Update()
     {

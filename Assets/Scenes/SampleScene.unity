@@ -308,4 +308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1a55e482e881d40bd34c612032ef2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  component: {fileID: 54716147248835052, guid: 84515ab227a83f540be3ce2e308d9729, type: 2}
+  component: {fileID: 1887240680542252, guid: 88522ab141d795a468029c3f1bb5cd82, type: 2}
+  intersection: {fileID: 1958620370252994, guid: 95308154e156c944cbf3a934fe305ec5,
+    type: 2}
+  res: 9
+  size: 1
+  add_verticies: 1
