@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CreateCube.cs" />
     <Compile Include="Assets\Scripts\TouchRotatable.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Josh/Documents/EuclidsFactory/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
