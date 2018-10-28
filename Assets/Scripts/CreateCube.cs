@@ -48,6 +48,33 @@ public class CreateCube : MonoBehaviour
                     for (float depth = -size / 2f; depth <= size / 2f; depth += size / res)
                     {
                         // Potential for refactor. Quick, dirty, but works
+                        float max = Mathf.Abs(height) > Mathf.Abs(width) ? Mathf.Abs(height) : Mathf.Abs(width);
+                        max = Mathf.Abs(depth) > max ? Mathf.Abs(depth) : max;
+
+                        if ((size / 2) - max != 0f)
+                            continue;
+
+                        GameObject vertex = (GameObject)Instantiate(intersection, transform.position, transform.rotation);
+
+                        vertex.transform.parent = transform;
+                        vertex.transform.localPosition = new Vector3(width, height, depth);
+                        vertex.transform.localScale = new Vector3(size / (3f * res), size / (3f * res), size / (3f * res));
+                    }
+                }
+            }
+        }
+
+        /* POTENTIAL FOR CODE RE-USE
+         * This old code for adding a sphere at each vertex doubles as an algorithm for creating even cubes
+        if (add_verticies)
+        {
+            for (float width = -size / 2f; width <= size / 2f; width += size / res)
+            {
+                for (float height = -size / 2f; height <= size / 2f; height += size / res)
+                {
+                    for (float depth = -size / 2f; depth <= size / 2f; depth += size / res)
+                    {
+                        // Potential for refactor. Quick, dirty, but works
                         if (Mathf.Abs(width) + Mathf.Abs(height) + Mathf.Abs(depth) < size)
                             continue;
 
@@ -60,5 +87,6 @@ public class CreateCube : MonoBehaviour
                 }
             }
         }
+        */
     }
 }
