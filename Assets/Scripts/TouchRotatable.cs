@@ -14,39 +14,11 @@ public class TouchRotatable : MonoBehaviour
     int angle_remaining = 0;
     int delta_angle = 0;
     bool rotate_on_x = false;
-    private enum Direction {x, y, z, rx, ry, rz};
-    Direction x_dir = Direction.x;
-    Direction y_dir = Direction.y;
 
     // Use this for initialization
     void Start()
     {
 
-    }
-
-    void apply_rotation(Direction dir, int degrees)
-    {
-        switch (dir)
-        {
-            case Direction.x:
-                transform.Rotate(0, degrees, 0);
-                break;
-            case Direction.y:
-                transform.Rotate(degrees, 0, 0);
-                break;
-            case Direction.z:
-                transform.Rotate(0, 0, degrees);
-                break;
-            case Direction.rx:
-                transform.Rotate(0, -degrees, 0);
-                break;
-            case Direction.ry:
-                transform.Rotate(-degrees, 0, 0);
-                break;
-            case Direction.rz:
-                transform.Rotate(0, 0, -degrees);
-                break;
-        }
     }
 
     // Update is called once per frame
@@ -76,9 +48,9 @@ public class TouchRotatable : MonoBehaviour
         if (!can_rotate)
         {
             if (rotate_on_x)
-                apply_rotation(x_dir, delta_angle);
+                transform.Rotate(0, delta_angle, 0, Space.World);
             else
-                apply_rotation(y_dir, delta_angle);
+                transform.Rotate(delta_angle, 0, 0, Space.World);
 
             angle_remaining -= delta_angle;
             if (angle_remaining == 0)

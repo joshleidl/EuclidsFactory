@@ -47,6 +47,10 @@ public class CreateCube : MonoBehaviour
                 {
                     for (float depth = -size / 2f; depth <= size / 2f; depth += size / res)
                     {
+                        // Potential for refactor. Quick, dirty, but works
+                        if (Mathf.Abs(width) + Mathf.Abs(height) + Mathf.Abs(depth) < size)
+                            continue;
+
                         GameObject vertex = (GameObject)Instantiate(intersection, transform.position, transform.rotation);
 
                         vertex.transform.parent = transform;

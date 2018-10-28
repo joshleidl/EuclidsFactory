@@ -311,6 +311,6 @@ MonoBehaviour:
   component: {fileID: 1887240680542252, guid: 88522ab141d795a468029c3f1bb5cd82, type: 2}
   intersection: {fileID: 1958620370252994, guid: 95308154e156c944cbf3a934fe305ec5,
     type: 2}
-  res: 9
-  size: 1
+  res: 5
+  size: 1.1
   add_verticies: 1
