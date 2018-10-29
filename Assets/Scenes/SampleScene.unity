@@ -266,9 +266,10 @@ GameObject:
   - component: {fileID: 699931410}
   - component: {fileID: 699931409}
   - component: {fileID: 699931411}
+  - component: {fileID: 699931412}
   m_Layer: 0
   m_Name: CubeSpawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,6 +312,18 @@ MonoBehaviour:
   component: {fileID: 1887240680542252, guid: 88522ab141d795a468029c3f1bb5cd82, type: 2}
   intersection: {fileID: 1958620370252994, guid: 95308154e156c944cbf3a934fe305ec5,
     type: 2}
-  res: 5
-  size: 1.1
+  res: 3
+  size: 1
   add_verticies: 1
+--- !u!114 &699931412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 699931408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9094a6235159e78469fc521d29a87776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchor: {fileID: 0}
